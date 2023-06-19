@@ -8,7 +8,7 @@
 </p>
 
 # About This Project
-Project ini merupakan hasil belajar saya selama beberapa hari, project ini merupakan api untuk sebuah aplikasi toko buku, bagi teman teman yang mau silahkan clone, untuk cara clone dan bagaimana cara install sampai project ini runing teman teman bisa ikutin [disini](), sebelum menjalankan project ini teman teman harus sudah menginstall laravel untuk tutorial install laravel bisa ikuti rekomendasi video [disini]()
+Project ini merupakan hasil belajar saya selama beberapa hari, project ini merupakan api untuk sebuah aplikasi toko buku, bagi teman teman yang mau silahkan clone, untuk cara clone dan bagaimana cara install sampai project ini runing teman teman bisa ikutin [disini](), sebelum menjalankan project ini teman teman harus sudah menginstall laravel untuk tutorial install laravel bisa ikuti rekomendasi video [disini](https://www.youtube.com/watch?v=pZqk57Xvujs&list=PLFIM0718LjIWiihbBIq-SWPU6b6x21Q_2&index=2)
 
 # End Point
 Project ini memiliki beberapa endpoint yang bisa di gunakan seperti authentification, getProduct, dan Cart
@@ -104,6 +104,73 @@ Content-Type: application/json
 ```
 {
   "message": "User registered successfully"
+}
+
+```
+
+
+### Register 
+
+**Deskripsi**: Melakukan login ke dalam sistem.
+
+**URL**: `api/auth/login`
+
+**Metode**: POST
+
+**Parameter Wajib Di Isi**:
+
+- `email` (wajib): admin@admin.com
+- `password` (wajib): password,
+- `name` (wajib): admin ganteng,
+- `tanggal_lahir` (wajib): 2016-08-05,
+- `nomor_telp` (wajib): 083333333,
+- `alamat` (wajib): jalan keuning,
+- `avatar` (optional): file,
+
+**Contoh Permintaan**:
+```
+POST /api/auth/register
+Content-Type: application/json
+
+{
+  "email": "admin@admin.com",
+  "password" : "password",
+  "name": "zulkarnaen",
+  "tanggal_lahir": "2016-08-05",
+  "nomor_telp": "083333333",
+  "alamat":  "jalan keuning"
+}
+```
+**Contoh Respons**:
+
+```
+{
+  "message": "User registered successfully"
+}
+
+```
+
+## Logout
+
+API ini memerlukan autentikasi menggunakan token. Untuk mengakses endpoint ini, Anda perlu menyertakan token autentikasi dalam header permintaan.
+
+**Deskripsi**: Melakukan logout dari sistem.
+
+**URL**: `api/auth/login`
+
+**Metode**: GET
+
+```http
+GET /api/logout
+Authorization: Bearer {token}
+
+```
+**Contoh Respons**:
+
+```
+{
+  "status": "success",
+  "message": "berhasil logout"
 }
 
 ```
