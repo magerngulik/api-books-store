@@ -51,7 +51,7 @@ Content-Type: application/json
 ```
 **Contoh Respons**:
 
-```
+```json
 {
   "status": "success",
   "data": {
@@ -101,7 +101,7 @@ Content-Type: application/json
 ```
 **Contoh Respons**:
 
-```
+```json
 {
   "message": "User registered successfully"
 }
@@ -143,16 +143,16 @@ Content-Type: application/json
 ```
 **Contoh Respons**:
 
-```
+```json
 {
   "message": "User registered successfully"
 }
 
 ```
 
-## Logout
+### Logout
 
-API ini memerlukan autentikasi menggunakan token. Untuk mengakses endpoint ini, Anda perlu menyertakan token autentikasi dalam header permintaan.
+API ini memerlukan autentikasi menggunakan token. Untuk mengakses endpoint ini, Anda perlu menyertakan token autentikasi dalam header permintaan. untuk mendapatkan token nya ketika di akses pada end point [login](#login) di atas.
 
 **Deskripsi**: Melakukan logout dari sistem.
 
@@ -167,7 +167,7 @@ Authorization: Bearer {token}
 ```
 **Contoh Respons**:
 
-```
+```json
 {
   "status": "success",
   "message": "berhasil logout"
