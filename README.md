@@ -40,13 +40,13 @@ http://127.0.0.1:8000
 - `password` (wajib): password
 
 **Contoh Permintaan**:
-```
+```http
 POST /api/auth/login
 Content-Type: application/json
 
 {
-  "email": admin@admin.com,
-  "password": password
+  "email": "admin@admin.com",
+  "password": "password"
 }
 ```
 **Contoh Respons**:
@@ -85,7 +85,7 @@ Content-Type: application/json
 - `avatar` (optional): file,
 
 **Contoh Permintaan**:
-```
+```http
 POST /api/auth/register
 Content-Type: application/json
 
@@ -128,7 +128,7 @@ Content-Type: application/json
 - `avatar` (optional): file,
 
 **Contoh Permintaan**:
-```
+```http
 POST /api/auth/register
 Content-Type: application/json
 
