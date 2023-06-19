@@ -90,49 +90,6 @@ POST /api/auth/register
 Content-Type: application/json
 
 {
-  'email': admin@admin.com,
-  'password': password,
-  'name': zulkarnaen,
-  'tanggal_lahir': '',
-  'nomor_telp': '',
-  'alamat': '',
-  'avatar': file
-}
-```
-**Contoh Respons**:
-
-```json
-{
-  "message": "User registered successfully"
-}
-
-```
-
-
-### Register 
-
-**Deskripsi**: Melakukan login ke dalam sistem.
-
-**URL**: `api/auth/login`
-
-**Metode**: POST
-
-**Parameter Wajib Di Isi**:
-
-- `email` (wajib): admin@admin.com
-- `password` (wajib): password,
-- `name` (wajib): admin ganteng,
-- `tanggal_lahir` (wajib): 2016-08-05,
-- `nomor_telp` (wajib): 083333333,
-- `alamat` (wajib): jalan keuning,
-- `avatar` (optional): file,
-
-**Contoh Permintaan**:
-```http
-POST /api/auth/register
-Content-Type: application/json
-
-{
   "email": "admin@admin.com",
   "password" : "password",
   "name": "zulkarnaen",
